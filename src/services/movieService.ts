@@ -11,7 +11,7 @@ const ENDPOINT = {
   SEARCH: "/search/movie",
 };
 
-async function fetchMovies(query: string) {
+async function fetchMovies(query: string): Promise<Movie[]> {
   const url = API_BASE_URL + ENDPOINT.SEARCH;
 
   const { data } = await axios.get<MoviesResponse>(url, {

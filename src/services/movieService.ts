@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { Movie } from "../types/movie";
 
-interface MovieResponse {
+interface MoviesResponse {
   results: Movie[];
 }
 
@@ -14,7 +14,7 @@ const ENDPOINT = {
 async function fetchMovies(query: string) {
   const url = API_BASE_URL + ENDPOINT.SEARCH;
 
-  const { data } = await axios.get<MovieResponse>(url, {
+  const { data } = await axios.get<MoviesResponse>(url, {
     params: {
       query,
     },

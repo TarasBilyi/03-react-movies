@@ -14,6 +14,7 @@ function SearchBar({ onSubmit }: SearchBarProps) {
       toast.error("Please enter your search query.");
       return;
     }
+
     onSubmit(trimmedQuery);
   };
 
